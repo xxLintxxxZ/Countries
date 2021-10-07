@@ -5,20 +5,23 @@ function Form(props) {
 
 
   const [countryData, setcountryData] = useState("");
-  const [countryTitle, setcountryTitle] = useState("australia");
+  const [countryTitle, setcountryTitle] = useState("europe");
 
+  // fetch("https://restcountries.com/v3.1/name/" + countryTitle)
+  // .then((res) => res.json())
+  // .then((countryData) => {
+  //   console.log(countryData);
+  //   setcountryData(countryData);
   
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/name/" + countryTitle)
-      .then((res) => res.json())
-      .then((countryData) => {
-        console.log(countryData);
-        setcountryData(countryData);
 
-        console.log(countryData[0].capital);
-        console.log(countryData[0].maps.googleMaps);
-        console.log(countryData[0].flags.png);
+    fetch("https://restcountries.com/v3.1/region/" + countryTitle)
+    .then((res) => res.json())
+    .then((countryData) => {
+    console.log(countryData);
+    setcountryData(countryData)
       });
+    
   }, [countryTitle]);
 
   

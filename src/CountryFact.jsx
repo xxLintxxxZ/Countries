@@ -8,9 +8,9 @@ function Country(props) {
     <div className="card" style={myStyle}>
          <h3>Flag</h3>
       <img src={props.img} class="card-img-top" alt="..."  />
-      <div class="card-body">
+      <div className="card-body">
          
-        <p class="card-text"> Capital : {props.name} </p>
+        <p className="card-text"> Capital : {props.name} </p>
       </div>
     </div>
   );
