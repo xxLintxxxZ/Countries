@@ -21,6 +21,9 @@ const Home = () => {
         <Typography variant="h6" color="inherit" noWrap>
           Country
         </Typography>
+        <Typography variant="h6" color="inherit" noWrap>
+          Country
+        </Typography>
       </Toolbar>
     </AppBar>
 
@@ -41,11 +44,10 @@ const Home = () => {
             color="text.primary"
             gutterBottom
           >
-            Album layout
+           WELCOME TO THE COUNTRIES TRIVIA
           </Typography>
           <Typography variant="h5" align="center" color="text.secondary" paragraph>
-            Something short and leading about the collection below—its contents,
-            the creator, etc. Make it short and sweet, but not too short so folks
+            Random country flags and capital.
             don&apos;t simply skip over it entirely.
           </Typography>
           <Stack
@@ -72,7 +74,7 @@ const Home = () => {
         color="text.secondary"
         component="p"
       >
-        Something here to give the footer a purpose!
+        ~ Simplicity is the ultimate sophistication ~ 
       </Typography>
       
     </Box>

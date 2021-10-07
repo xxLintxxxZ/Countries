@@ -13,11 +13,12 @@ function App() {
 
   return (
     <div className="App">
+      
       <nav>
-        <Link to="/"> Go to Home Page </Link>
-        <Link to="/Form"> Mini - Game </Link>
-        <Link to="/About"> About this App </Link>
+        <Link to="/"> Back to Home Page </Link>
+        <Link to="/Form"> Search by Country </Link>
         <Link to="/ImageList"> ImageList Test </Link>
+        <Link to="/About"> About this App </Link>
 
       </nav>
       <main>
@@ -26,7 +27,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Form">
-       
+       <Form/>
         </Route>
        <Route path = "/ImageList">
          <TitlebarBelowImageList/>

@@ -4,8 +4,8 @@ import Country from './CountryFact';
 function Form(props) {
 
 
-  const [countryData, setcountryData] = useState("");
-  const [countryTitle, setcountryTitle] = useState("europe");
+  const [countryData, setcountryData] = useState([]);
+  const [countryTitle, setcountryTitle] = useState("denmark");
 
   // fetch("https://restcountries.com/v3.1/name/" + countryTitle)
   // .then((res) => res.json())
@@ -15,7 +15,7 @@ function Form(props) {
   
   useEffect(() => {
 
-    fetch("https://restcountries.com/v3.1/region/" + countryTitle)
+    fetch("https://restcountries.com/v3.1/name/" + countryTitle)
     .then((res) => res.json())
     .then((countryData) => {
     console.log(countryData);
@@ -38,11 +38,19 @@ function Form(props) {
     setcountryTitle(title);
   };
 
+
+ //onSubmit={handleSubmit}
+
   return (
     <>
     <div>
-      <form onSubmit={handleSubmit}>
+      <form >
         <br/> <br/>
+       <div/> 
+       
+        Key in the country directly in the input box below to 
+         display a country's flag and capital <br/><br/>
+
         <label htmlFor="countryTitle">Country: </label>
         <input
           id="countryTitle"
@@ -50,7 +58,7 @@ function Form(props) {
           value={countryTitle}
           onChange={handleChange}
         />
-        <input type="submit" value="Find Random Trivia" />
+        <input type="submit" value="<- Find Random Country Flag & Capital" />
         <Country name = {countryData?.[0]?.capital} img = {countryData?.[0]?.flags.png}/>
       </form>
       </div>
