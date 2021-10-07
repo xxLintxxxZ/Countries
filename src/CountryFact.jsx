@@ -10,7 +10,7 @@ function Country(props) {
       <img src={props.img} class="card-img-top" alt="..."  />
       <div className="card-body">
          
-        <p className="card-text"> Capital : {props.name} </p>
+        <p className="card-text"> Name : {props.name} Capital : {props.capital} </p>
       </div>
     </div>
   );
