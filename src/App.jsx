@@ -14,11 +14,14 @@ import HomeIcon from '@mui/icons-material/Home';
 import { Link } from "@mui/material";
 
 
+// first part is the nav bar -- in a box - flexbox
+
 function App() {
 
   return (
     <div className="App">
-         <div style={{ width: '100%' }}>
+   
+      <div style={{ width: '100%' }}> 
       <Box
         sx={{
           display: 'flex',
@@ -39,6 +42,7 @@ function App() {
         </Box>
       </Box>
       </div>
+
       <main>
         <Switch>
       <Route exact path="/">
