@@ -9,6 +9,7 @@ import TitlebarBelowImageList from "./ImageList";
 import { Link } from "@mui/material";
 import Select from "./select";
 
+
 // first part is the nav bar -- in a box - flexbox
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
           <Route path="/ImageList">
             <TitlebarBelowImageList />
           </Route>
+        
         </Switch>
       </main>
     </div>
