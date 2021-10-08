@@ -5,7 +5,7 @@ function Form(props) {
 
 
   const [countryData, setcountryData] = useState([]);
-  const [countryTitle, setcountryTitle] = useState("denmark");
+  const [countryTitle, setcountryTitle] = useState("australia");
 
   // fetch("https://restcountries.com/v3.1/name/" + countryTitle)
   // .then((res) => res.json())
