@@ -1,10 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Country from "./CountryFact";
-import Button from "@mui/material/Button";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
 import { Stack } from "@mui/material";
+import { Typography } from "@mui/material";
+import { CardMedia, Card, CardContent } from "@mui/material";
+
 export default function Form(props) {
+
+  const theme = createTheme({
+    palette: {
+      type: "light",
+      primary: {
+        main: '#eadada',
+      },
+      secondary: {
+        main: '#eadada',
+      },
+      background: {
+        default: '#efbebe',
+          paper: '#e2efef'
+      },
+    },
+  });
+
   const [countryData, setcountryData] = useState([]);
   const [countryTitle, setcountryTitle] = useState("australia");
 
@@ -40,20 +60,19 @@ export default function Form(props) {
   //<button value= "<- Find Random Country Flag & Capital" />
 
   return (
-    <main>
+    <ThemeProvider theme={theme}>
       {/* Hero unit */}
-      <Container maxWidth="sm">
+      <Container maxWidth="sm" >
         <br />
         <Box
           sx={{
             display: "flex",
             justifyContent: "flex-start",
             p: 1,
-            m: 1,
-            bgcolor: "primary.paper",
+            m: 1
           }}
         >
-          <Box sx={{ p: 1, bgcolor: "grey.300" }}>
+          <Box sx={{ p: 1 }}>
             <label htmlFor="countryTitle"> Search a Country : </label>
             <input
               id="countryTitle"
@@ -63,14 +82,31 @@ export default function Form(props) {
             />
           </Box>
       </Box>
-          <Box><Country
+          <Box sx= {{ justifyContent: "center" }}>
+            <Country sx= {{ justifyContent: "center", pl:2, pb:2, border: 3 }}
             name={countryData?.[0]?.name.common}
             capital={countryData?.[0]?.capital}
             img={countryData?.[0]?.flags.png}
           />
         </Box>
-      
-      </Container>
-    </main>
+        <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: { xs: 'center', md: 'flex-start' },
+          m: 2,
+          minWidth: { md: 350 },
+        }}
+      >
+        <Box component="span" sx={{ fontSize: 16, mt: 1 }}>
+          123 Main St, Phoenix AZ
+        </Box>
+        <Box component="span" sx={{ color: 'primary.main', fontSize: 22 }}>
+          $280,000 — $310,000
+        </Box></Box>
+        </Container>
+    </ThemeProvider>
   );
 }
+
+

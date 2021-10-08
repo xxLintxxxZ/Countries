@@ -7,23 +7,30 @@ import { Box } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
-
 import { createTheme, ThemeProvider } from "@mui/material";
 
-const theme = createTheme();
+
+const theme = createTheme({
+  palette: {
+      type: 'light',
+      primary: {
+        main: '#3f51b5',
+      },
+      secondary: {
+        main: '#f50057',
+      },
+      background: {
+        default: '#e9ecec',
+        paper: '#dcd0d0',
+      },
+    },
+  });
 
 const Home = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Country
-          </Typography>
-        </Toolbar>
-      </AppBar>
-
+     
       <main>
         {/* Hero unit */}
         <Box

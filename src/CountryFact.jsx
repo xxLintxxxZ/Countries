@@ -1,18 +1,46 @@
 import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { Typography } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    type: "light",
+    primary: {
+      main: "#90caf9",
+    },
+    secondary: {
+      main: "#f48fb1",
+    },
+    background: {
+        paper: '#e2efef',
+    },
+  },
+});
 
 function Country(props) {
   console.log("Props ", props);
   const myStyle = { width: "18rem" };
 
   return (
-    <div className="card" style={myStyle}>
-         <h3>Flag</h3>
-      <img src={props.img} class="card-img-top" alt="..."  />
-      <div className="card-body">
-         
-        <p className="card-text"> Name : {props.name} Capital : {props.capital} </p>
-      </div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          component="img"
+          height="200" width ="248" fit="crop" auto="format"
+          image={props.img}
+          alt="green iguana"
+        />
+        <br/>
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            Name : {props.name} Capital : {props.capital}
+          </Typography>
+        </CardContent>
+      </Card>
+    </ThemeProvider>
   );
 }
 

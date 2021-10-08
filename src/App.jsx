@@ -13,36 +13,37 @@ import Select from "./select";
 // first part is the nav bar -- in a box - flexbox
 
 function App() {
+
+
   return (
+   
     <div className="App">
       <div style={{ width: "100%" }}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "row",
-            p: 1,
-            m: 1,
-            bgcolor: "background.paper",
+            bgcolor: '#00ACC1',
           }}
         >
-          <Box sx={{ p: 1, bgcolor: "grey.300" }}>
-            <Link component={RouterLink} to="/">
+          <Box sx={{ p: 3}}>
+            <Link component={RouterLink} to="/" sx={{ color: "white" }}>
               {" "}
               Back to Home{" "}
             </Link>
           </Box>
-          <Box sx={{ p: 1, bgcolor: "grey.300" }}>
-            <Link component={RouterLink} to="/Form">
+          <Box sx={{ p: 3}}>
+            <Link component={RouterLink} to="/Form" sx={{ color: "white" }}>
               Search Country
             </Link>
           </Box>
-          <Box sx={{ p: 1, bgcolor: "grey.300" }}>
-            <Link component={RouterLink} to="/Select">
+          <Box sx={{ p: 3 }}>
+            <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
               Select countries by region
             </Link>
           </Box>
-          <Box sx={{ p: 1, bgcolor: "grey.300" }}>
-            <Link component={RouterLink} to="/Imagelist">
+          <Box sx={{ p: 3 }}>
+            <Link component={RouterLink} to="/Imagelist" sx={{ color: "white" }}>
               Display countries by Region
             </Link>
           </Box>
@@ -67,6 +68,7 @@ function App() {
         </Switch>
       </main>
     </div>
+ 
   );
 }
 

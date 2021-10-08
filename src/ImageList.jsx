@@ -5,8 +5,20 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { useState,useEffect } from 'react';
 import { Box } from "@mui/material";
 import { Container } from "@mui/material";
+import { createTheme, ThemeProvider } from '@mui/material';
+import { orange } from '@mui/material/colors';
 
 export default function TitlebarBelowImageList(Props) {
+
+  const theme = createTheme({
+    palette: {
+        type: 'light',
+      
+        background: {
+          paper: '#e3f2fd'
+        },
+      },
+    });
 
     const [countryData, setcountryData] = useState([]);
     const [countryTitle, setcountryTitle] = useState("asia");
@@ -23,13 +35,11 @@ export default function TitlebarBelowImageList(Props) {
       
     }, [countryTitle]);
     
-
     const count2 = [countryData];
     console.log(count2)
 
         return (
-          <>
-          <main>
+          <ThemeProvider theme={theme}>
         {/* Hero unit */}
         <Box
           sx={{
@@ -41,9 +51,10 @@ export default function TitlebarBelowImageList(Props) {
           <Container maxWidth="sm">
             Hello world!
           <h2>There are {countryData.length} countries in {countryTitle} </h2>
-            <ImageList sx={{ width: 600, height: 450 }}>
+            <ImageList sx={{ width: 600, height: 450,  pt: 8,
+            pb: 6 }}>
             { countryData && countryData.map((item, index) => (
-              <ImageListItem key={index}>
+              <ImageListItem key={index} sx= {{ border :2}}>
                 <img
                   src={`${item?.flags.png}?w=248&fit=crop&auto=format`}
                   srcSet={`${item?.flags.png}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -60,9 +71,7 @@ export default function TitlebarBelowImageList(Props) {
           </ImageList>
           </Container>
         </Box>
-      </main>
-
-          </>
+        </ThemeProvider>
         );
       }
 
