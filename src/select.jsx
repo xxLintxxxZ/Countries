@@ -33,19 +33,18 @@ const currencies = [
 
 
 export default function Select() {
-  const [currency, setCurrency] = React.useState("europe");
+  const [currency, setCurrency] = useState("europe");
+  const [countryData, setcountryData] = useState([]);
+  const [countryTitle, setcountryTitle] = useState(currency);
 
   const handleChange = (event) => {
     setCurrency(event.target.value);
+    setcountryTitle(event.target.value)
   };
 
   console.log (currency)
 
-
-    const [countryData, setcountryData] = useState([]);
-    const [countryTitle, setcountryTitle] = useState(currency);
-
-    console.log(countryTitle)
+ console.log(countryTitle)
   
     useEffect(() => {
       fetch("https://restcountries.com/v3.1/region/" + currency)
