@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import { Toolbar } from '@mui/material';
 import { Typography } from '@mui/material';
 import { Container } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme();
