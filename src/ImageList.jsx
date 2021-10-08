@@ -3,11 +3,11 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { useState,useEffect } from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
-import Stack from '@mui/material/Stack';
-
-
+import { Stack } from "@mui/material";
+import { Box } from "@mui/material";
+import { Button } from '@mui/material';
+import { Typography } from "@mui/material";
+import { Container } from "@mui/material";
 
 export default function TitlebarBelowImageList(Props) {
 
@@ -32,9 +32,19 @@ export default function TitlebarBelowImageList(Props) {
 
         return (
           <>
-          Hello world!
+          <main>
+        {/* Hero unit */}
+        <Box
+          sx={{
+            bgcolor: "background.paper",
+            pt: 8,
+            pb: 6,
+          }}
+        >
+          <Container maxWidth="sm">
+            Hello world!
           <h2>There are {countryData.length} countries in {countryTitle} </h2>
-            <ImageList sx={{ width: 500, height: 450 }}>
+            <ImageList sx={{ width: 600, height: 450 }}>
             { countryData && countryData.map((item, index) => (
               <ImageListItem key={index}>
                 <img
@@ -51,6 +61,10 @@ export default function TitlebarBelowImageList(Props) {
               </ImageListItem>
             ))}
           </ImageList>
+          </Container>
+        </Box>
+      </main>
+
           </>
         );
       }
