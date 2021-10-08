@@ -89,21 +89,7 @@ export default function Form(props) {
             img={countryData?.[0]?.flags.png}
           />
         </Box>
-        <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: { xs: 'center', md: 'flex-start' },
-          m: 2,
-          minWidth: { md: 350 },
-        }}
-      >
-        <Box component="span" sx={{ fontSize: 16, mt: 1 }}>
-          123 Main St, Phoenix AZ
-        </Box>
-        <Box component="span" sx={{ color: 'primary.main', fontSize: 22 }}>
-          $280,000 — $310,000
-        </Box></Box>
+      
         </Container>
     </ThemeProvider>
   );
