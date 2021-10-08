@@ -3,25 +3,23 @@ import Country from "./CountryFact";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
-import { Stack } from "@mui/material";
+import { Paper } from "@mui/material";
+
 import { Typography } from "@mui/material";
 import { CardMedia, Card, CardContent } from "@mui/material";
+import { Stack } from "@mui/material";
 
 export default function Form(props) {
-
   const theme = createTheme({
     palette: {
       type: "light",
       primary: {
-        main: '#eadada',
+        main: "#eadada",
       },
       secondary: {
-        main: '#eadada',
+        main: "#eadada",
       },
-      background: {
-        default: '#efbebe',
-          paper: '#e2efef'
-      },
+  
     },
   });
 
@@ -62,17 +60,9 @@ export default function Form(props) {
   return (
     <ThemeProvider theme={theme}>
       {/* Hero unit */}
-      <Container maxWidth="sm" >
-        <br />
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-start",
-            p: 1,
-            m: 1
-          }}
-        >
-          <Box sx={{ p: 1 }}>
+        <Container maxWidth="sm">
+          <Stack direction="row" spacing={2}>
+            <Box sx={{ p: 4, alignContent: "center" }}>
             <label htmlFor="countryTitle"> Search a Country : </label>
             <input
               id="countryTitle"
@@ -81,18 +71,15 @@ export default function Form(props) {
               onChange={handleChange}
             />
           </Box>
-      </Box>
-          <Box sx= {{ justifyContent: "center" }}>
-            <Country sx= {{ justifyContent: "center", pl:2, pb:2, border: 3 }}
-            name={countryData?.[0]?.name.common}
-            capital={countryData?.[0]?.capital}
-            img={countryData?.[0]?.flags.png}
-          />
-        </Box>
-      
+            <Paper elevation={3} sx={{ p: 3 }}>
+            <Country
+              name={countryData?.[0]?.name.common}
+              capital={countryData?.[0]?.capital}
+              img={countryData?.[0]?.flags.png}
+            />
+          </Paper>
+          </Stack>
         </Container>
     </ThemeProvider>
   );
 }
-
-

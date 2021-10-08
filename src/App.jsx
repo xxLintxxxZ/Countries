@@ -50,7 +50,7 @@ function App() {
         </Box>
       </div>
 
-      <main>
+      <main >
         <Switch>
           <Route exact path="/">
             <Home />
@@ -64,11 +64,9 @@ function App() {
           <Route path="/ImageList">
             <TitlebarBelowImageList />
           </Route>
-        
         </Switch>
-      </main>
-    </div>
- 
+    </main>
+ </div>
   );
 }
 
