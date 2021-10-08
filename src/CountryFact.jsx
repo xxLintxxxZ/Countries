@@ -21,7 +21,7 @@ function Country(props) {
     });
   return (
     <Box >
-      <Card sx={{ maxWidth: 345 }} >
+      <Card sx={{ maxWidth: 345, border:1, p:2, bgcolor: "lightblue" }} >
       <CardHeader
          sx={{ bgcolor: "lightblue"}} 
         title= "Flag"
@@ -32,7 +32,7 @@ function Country(props) {
           image={props.img}
           alt="country"
         />
-        <CardContent sx={{ bgcolor: "lightblue"}} >
+        <CardContent  >
             Name : {props.name} Capital : {props.capital}
         </CardContent>
       </Card>
