@@ -84,7 +84,7 @@ export default function Select() {
         </TextField>
         <Container maxWidth="sm">
           <h2>There are {countryData.length} countries in {countryTitle} </h2>
-            <ImageList sx={{ width: 500, height: 450 }}>
+            <ImageList sx={{ width: 600, height: 450 }}>
             { countryData && countryData.map((item, index) => (
               <ImageListItem key={index}>
                 <img
