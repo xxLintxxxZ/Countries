@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
+
 import { createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme();
@@ -20,7 +20,7 @@ const Home = () => {
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
             Country
-          </Typography>        
+          </Typography>
         </Toolbar>
       </AppBar>
 
@@ -52,6 +52,9 @@ const Home = () => {
               Random country flags and capital. don&apos;t simply skip over it
               entirely.
             </Typography>
+           
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Coat_of_arms_of_Saint_Pierre_and_Miquelon.svg/400px-Coat_of_arms_of_Saint_Pierre_and_Miquelon.svg.png" width = "200" height = "247"/>
+           
             <Stack
               sx={{ pt: 4 }}
               direction="row"
@@ -59,7 +62,8 @@ const Home = () => {
               justifyContent="center"
             >
               <Button variant="contained">
-                Do you know that there is a country named "" in Europe?
+                Do you know that there is a country named "Saint Pierre and
+                Miquelon" in the Americas
               </Button>
             </Stack>
           </Container>
