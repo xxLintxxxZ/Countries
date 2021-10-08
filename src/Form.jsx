@@ -40,6 +40,7 @@ function Form(props) {
 
 
  //onSubmit={handleSubmit}
+ //<button value= "<- Find Random Country Flag & Capital" />
 
   return (
     <>
@@ -58,7 +59,7 @@ function Form(props) {
           value={countryTitle}
           onChange={handleChange}
         />
-        <input type="submit" value="<- Find Random Country Flag & Capital" />
+    
         <Country name = {countryData?.[0]?.name.common} capital = {countryData?.[0]?.capital} img = {countryData?.[0]?.flags.png}/>
       </form>
       </div>
