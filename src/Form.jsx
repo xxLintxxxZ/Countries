@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Country from './CountryFact';
-
+import Button from '@mui/material/Button';
 function Form(props) {
 
 
@@ -59,8 +59,9 @@ function Form(props) {
           value={countryTitle}
           onChange={handleChange}
         />
-    
+       <Button variant ="contained">{countryTitle}</Button>
         <Country name = {countryData?.[0]?.name.common} capital = {countryData?.[0]?.capital} img = {countryData?.[0]?.flags.png}/>
+       
       </form>
       </div>
     </>
