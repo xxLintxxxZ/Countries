@@ -35,11 +35,15 @@ function App() {
         <Link component ={RouterLink} to="/">  Back to Home </Link> 
         </Box>
         <Box sx={{ p: 1, bgcolor: 'grey.300' }}>
+        <Link component ={RouterLink} to = "/Form">Search Country</Link>
+         </Box>
+         <Box sx={{ p: 1, bgcolor: 'grey.300' }}>
         <Link component ={RouterLink} to = "/Imagelist">Display countries by Region</Link>
          </Box>
         <Box sx={{ p: 1, bgcolor: 'grey.300' }}>
         <Link component ={RouterLink} to = "/optionSelect">Drop Down List</Link> 
         </Box>
+
       </Box>
       </div>
 
