@@ -2,30 +2,41 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Typography } from "@mui/material";
-
-
+import { CardHeader } from "@mui/material";
+import { Avatar } from "@mui/material";
+import { createTheme} from '@mui/material';
+import { Box } from "@mui/system";
 
 function Country(props) {
   console.log("Props ", props);
  
-
+  const theme = createTheme({
+    palette: {
+        type: 'light',
+      
+        background: {
+          paper: '#e3f2fd'
+        },
+      },
+    });
   return (
-   
+    <Box >
       <Card sx={{ maxWidth: 345 }} >
+      <CardHeader
+         sx={{ bgcolor: "lightblue"}} 
+        title= "Flag"
+        subheader="September 14, 2016"
+      />  
         <CardMedia
           component="img"
           image={props.img}
-          alt="green iguana"
+          alt="country"
         />
-        <br/>
-        <CardContent>
-        
+        <CardContent sx={{ bgcolor: "lightblue"}} >
             Name : {props.name} Capital : {props.capital}
-
         </CardContent>
       </Card>
-  
+  </Box>
   );
 }
 
