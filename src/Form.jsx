@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Country from './CountryFact';
 import Button from '@mui/material/Button';
-function Form(props) {
 
+
+export default function Form(props) {
 
   const [countryData, setcountryData] = useState([]);
   const [countryTitle, setcountryTitle] = useState("australia");
+
 
   // fetch("https://restcountries.com/v3.1/name/" + countryTitle)
   // .then((res) => res.json())
@@ -24,7 +26,6 @@ function Form(props) {
     
   }, [countryTitle]);
 
-  
   const handleSubmit = (e) => {
     console.log('Form - handleSubmit - countryTitle', countryTitle);
     e.preventDefault();
@@ -42,13 +43,13 @@ function Form(props) {
  //onSubmit={handleSubmit}
  //<button value= "<- Find Random Country Flag & Capital" />
 
+
   return (
     <>
     <div>
       <form >
         <br/> <br/>
        <div/> 
-       
         Key in the country directly in the input box below to 
          display a country's flag and capital <br/><br/>
 
@@ -68,4 +69,3 @@ function Form(props) {
   );
 }
 
-export default Form;

@@ -20,10 +20,7 @@ const Home = () => {
     <AppBar position="relative"> 
       <Toolbar>
         <Typography variant="h6" color="inherit" noWrap>
-          Country
-        </Typography>
-        <Typography variant="h6" color="inherit" noWrap>
-          Country
+          Country 
         </Typography>
       </Toolbar>
     </AppBar>
@@ -49,7 +46,7 @@ const Home = () => {
           </Typography>
           <Typography variant="h5" align="center" color="text.secondary" paragraph>
             Random country flags and capital.
-            don&apos;t simply skip over it entirely.
+             don&apos;t simply skip over it entirely.
           </Typography>
           <Stack
             sx={{ pt: 4 }}
@@ -57,8 +54,7 @@ const Home = () => {
             spacing={2}
             justifyContent="center"
           >
-            <Button variant="contained">Main call to action</Button>
-            <Button variant="outlined">Secondary action</Button>
+            <Button variant="contained">Do you know that there is a country named "" in Europe?</Button>
           </Stack>
         </Container>
       </Box>
@@ -67,7 +63,7 @@ const Home = () => {
     {/* Footer */}
     <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
       <Typography variant="h6" align="center" gutterBottom>
-        Footer
+       Quote of the day
       </Typography>
       <Typography
         variant="subtitle1"

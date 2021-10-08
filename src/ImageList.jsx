@@ -3,7 +3,10 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { useState,useEffect } from 'react';
-import {Component} from "react"
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import Stack from '@mui/material/Stack';
+
 
 
 export default function TitlebarBelowImageList(Props) {
