@@ -65,7 +65,7 @@ export default function Form(props) {
         <Box
           sx={{
             bgcolor: "background.paper",
-            pt: 8,
+            pt: 3,
             pb: 6,
           }}
         >
@@ -77,7 +77,14 @@ export default function Form(props) {
               color="text.primary"
               gutterBottom
             ></Typography>
-            <Typography
+
+              <Stack
+                sx={{ pt: 2}}
+                direction="row"
+                spacing={2}
+                justifyContent="center"
+              >
+              <Typography
               variant="h6"
               align="center"
               color="text.secondary"
@@ -94,19 +101,6 @@ export default function Form(props) {
               </Box>
             </Typography>
 
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            ></Typography>
-
-              <Stack
-                sx={{ pt: 4 }}
-                direction="row"
-                spacing={2}
-                justifyContent="center"
-              >
                 <Country
                   name={countryData?.[0]?.name.common}
                   capital={countryData?.[0]?.capital}

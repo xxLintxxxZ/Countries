@@ -63,7 +63,7 @@ export default function TitlebarBelowImageList(Props) {
                 />
                 <ImageListItemBar
                   title={item?.name.common}
-                  subtitle={<span> Capital : {item?.capital } Population: {item?.population}</span>}
+                  subtitle={<span> Capital : {item?.capital } Top-level domain: {item?.tld}</span>}
                   position="below"
                 />
               </ImageListItem>

@@ -7,6 +7,7 @@ import { ImageList } from "@mui/material";
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Container } from "@mui/material";
+import { Stack } from "@mui/material";
 
 const currencies = [
   {
@@ -57,6 +58,29 @@ export default function Select() {
   
 
   return (
+    <Stack
+    sx={{ pt: 4}}
+    direction="row"
+    spacing={2}
+    justifyContent="center"
+  >
+            <ImageList sx={{ width: 600, height: 450 }}>
+            { countryData && countryData.map((item, index) => (
+              <ImageListItem key={index} sx= {{ border :2}}>
+                <img sx= {{ border :2}}
+                  src={`${item?.flags.png}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item?.flags.png}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.capital}
+                  loading="lazy"
+                />
+                <ImageListItemBar
+                  title={item?.name.common}
+                  subtitle={<span> Capital : {item?.capital } Top-level domain: {item?.tld}</span>}
+                  position="below"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
     <Box
       component="form"
       sx={{
@@ -65,7 +89,6 @@ export default function Select() {
       noValidate
       autoComplete="off"
     >
-      <div>
         <TextField
           id="standard-select-currency"
           select
@@ -81,28 +104,8 @@ export default function Select() {
             </MenuItem>
           ))}
         </TextField>
-        <Container maxWidth="sm">
-          <h2>There are {countryData.length} countries in {countryTitle} </h2>
-            <ImageList sx={{ width: 600, height: 450 }}>
-            { countryData && countryData.map((item, index) => (
-              <ImageListItem key={index} sx= {{ border :2}}>
-                <img sx= {{ border :2}}
-                  src={`${item?.flags.png}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item?.flags.png}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.capital}
-                  loading="lazy"
-                />
-                <ImageListItemBar
-                  title={item?.name.common}
-                  subtitle={<span> Capital : {item?.capital } Population: {item?.population}</span>}
-                  position="below"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </Container>
-      </div>
-   
+        <h2>There are {countryData.length} countries in {countryTitle} </h2>
     </Box>
+    </Stack>
   );
 }

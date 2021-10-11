@@ -56,7 +56,7 @@ const Home = () => {
               color="text.secondary"
               paragraph
             >
-              Random country flags and capital. don&apos;t simply skip over it
+              Random country's flags and their capital. don&apos;t simply skip over it
               entirely.
             </Typography>
            
