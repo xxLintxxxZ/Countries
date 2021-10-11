@@ -35,6 +35,9 @@ function Country(props) {
         <CardContent  >
             Name : {props.name} Capital : {props.capital}
         </CardContent>
+        <CardContent  >
+            Name : {props.name} Capital : {props.capital}
+        </CardContent>
       </Card>
   </Box>
   );

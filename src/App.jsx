@@ -8,7 +8,7 @@ import { Switch } from "react-router";
 import TitlebarBelowImageList from "./ImageList";
 import { Link } from "@mui/material";
 import Select from "./select";
-
+import Album from "./Album";
 
 // first part is the nav bar -- in a box - flexbox
 
@@ -47,6 +47,12 @@ function App() {
               Display countries by Region
             </Link>
           </Box>
+          <Box sx={{ p: 3 }}>
+            <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
+              Display countries by Album style testing
+            </Link>
+          </Box>
+
         </Box>
       </div>
 
@@ -63,6 +69,9 @@ function App() {
           </Route>
           <Route path="/ImageList">
             <TitlebarBelowImageList />
+          </Route>
+          <Route path="/Album">
+            <Album/>
           </Route>
         </Switch>
     </main>

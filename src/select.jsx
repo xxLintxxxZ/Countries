@@ -86,7 +86,7 @@ export default function Select() {
             <ImageList sx={{ width: 600, height: 450 }}>
             { countryData && countryData.map((item, index) => (
               <ImageListItem key={index} sx= {{ border :2}}>
-                <img
+                <img sx= {{ border :2}}
                   src={`${item?.flags.png}?w=248&fit=crop&auto=format`}
                   srcSet={`${item?.flags.png}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.capital}
