@@ -43,11 +43,6 @@ function App() {
             </Link>
           </Box>
           <Box sx={{ p: 3 }}>
-            <Link component={RouterLink} to="/Imagelist" sx={{ color: "white" }}>
-              Display countries by Region
-            </Link>
-          </Box>
-          <Box sx={{ p: 3 }}>
             <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
               Display countries by Album style testing
             </Link>
@@ -66,9 +61,6 @@ function App() {
           </Route>
           <Route path="/Select">
             <Select />
-          </Route>
-          <Route path="/ImageList">
-            <TitlebarBelowImageList />
           </Route>
           <Route path="/Album">
             <Album/>
