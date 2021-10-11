@@ -34,15 +34,31 @@ function Copyright() {
 
 const cards = [1, 2, 3, 4, 5, 6];
 
-function numFormatter(num) {
-  if(num > 999 && num < 1000000){
-      return (num/1000).toFixed(1) + ' K'; // convert to K for number from > 1000 < 1 million 
-  }else if(num > 1000000){
-      return (num/1000000).toFixed(1) + ' mil'; // convert to mil for number from > 1 million 
-  }else if(num < 900){
-      return num; // if value < 1000, nothing to do
+
+
+function commarize() {
+  // Alter numbers larger than 1k
+  if (this >= 1e3) {
+    var units = ["K", "M", "B", "T"];
+    
+    // Divide to get SI Unit engineering style numbers (1e3,1e6,1e9, etc)
+    let unit = Math.floor(((this).toFixed(0).length - 1) / 3) * 3
+    // Calculate the remainder
+    var num = (this / ('1e'+unit)).toFixed(2)
+    var unitname = units[Math.floor(unit / 3) - 1]
+    
+    // output number remainder + unitname
+    return num + unitname
   }
+  
+  // return formatted original number
+  return this.toLocaleString()
 }
+
+// Add method to prototype. this allows you to use this function on numbers and strings directly
+Number.prototype.commarize = commarize
+String.prototype.commarize = commarize
+
 const theme = createTheme();
 
 export default function Album(Props) {
@@ -99,14 +115,14 @@ export default function Album(Props) {
                         // 16:9
                         p: "10.25%",
                       }}
-                      image={card?.flags.png}
+                      image={card?.flags.svg}
                       alt="random"
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       <Typography gutterBottom variant="h5" component="h2">
                         {card?.name.common}
                       </Typography>
-                      <Typography variant = "h6" >
+                      <Typography >
                       Capital : {card?.capital} 
                       </Typography>
                       <Typography >
@@ -116,7 +132,7 @@ export default function Album(Props) {
                     
                       </Typography>
                       <Typography >
-                      Population : {numFormatter(card?.population)} 
+                      Population : {card?.population.commarize()} 
                       </Typography>
                     </CardContent>
                     <CardActions>

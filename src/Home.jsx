@@ -64,13 +64,21 @@ const Home = () => {
            
             <Stack
               sx={{ pt: 4 }}
-              direction="row"
+              direction="column"
               spacing={2}
               justifyContent="center"
             >
+            <Typography
+              variant="h4"
+              align="center"
+              color="text.secondary"
+              paragraph
+            >
+              Do you know that? 
+            </Typography>
               <Button variant="contained">
-                Do you know that there is a country named "Saint Pierre and
-                Miquelon" in the Americas
+        
+              Nepal's flag is the world’s only non-quadrilateral national flag. Go and search for it under the region 'Asia'.
               </Button>
             </Stack>
           </Container>
