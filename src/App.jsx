@@ -18,57 +18,57 @@ function App() {
   return (
    
     <div className="App">
-      <div style={{ width: "100%" }}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            bgcolor: '#00ACC1',
-          }}
-        >
-          <Box sx={{ p: 3}}>
-            <Link component={RouterLink} to="/" sx={{ color: "white" }}>
-              {" "}
-              Back to Home{" "}
-            </Link>
-          </Box>
-          <Box sx={{ p: 3}}>
-            <Link component={RouterLink} to="/Form" sx={{ color: "white" }}>
-              Search Country
-            </Link>
-          </Box>
-          <Box sx={{ p: 3 }}>
-            <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
-              Select countries by region
-            </Link>
-          </Box>
-          <Box sx={{ p: 3 }}>
-            <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
-              Display countries by Album style testing
-            </Link>
-          </Box>
-
+    <div style={{ width: "100%" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          bgcolor: '#4c94f6',
+        }}
+      >
+        <Box sx={{ p: 3}}>
+          <Link component={RouterLink} to="/" sx={{ color: "white" }}>
+            {" "}
+            Home{" "}
+          </Link>
         </Box>
-      </div>
+        <Box sx={{ p: 3}}>
+          <Link component={RouterLink} to="/Form" sx={{ color: "white" }}>
+            Search by Country
+          </Link>
+        </Box>
+        <Box sx={{ p: 3 }}>
+          <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
+            Select Countries by Region
+          </Link>
+        </Box>
+        <Box sx={{ p: 3 }}>
+          <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
+            Display Countries by Album (testing)
+          </Link>
+        </Box>
 
-      <main >
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/Form">
-            <Form />
-          </Route>
-          <Route path="/Select">
-            <Select />
-          </Route>
-          <Route path="/Album">
-            <Album/>
-          </Route>
-        </Switch>
-    </main>
- </div>
-  );
+      </Box>
+    </div>
+
+    <main >
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/Form">
+          <Form />
+        </Route>
+        <Route path="/Select">
+          <Select />
+        </Route>
+        <Route path="/Album">
+          <Album/>
+        </Route>
+      </Switch>
+  </main>
+</div>
+);
 }
 
 export default App;

@@ -6,7 +6,7 @@ import { useState,useEffect } from 'react';
 import { Box } from "@mui/material";
 import { Container } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material';
-import { orange } from '@mui/material/colors';
+
 
 export default function TitlebarBelowImageList(Props) {
 
@@ -74,4 +74,3 @@ export default function TitlebarBelowImageList(Props) {
         </ThemeProvider>
         );
       }
-

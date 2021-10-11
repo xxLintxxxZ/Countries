@@ -12,18 +12,17 @@ import { createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
   palette: {
-      type: 'light',
-      primary: {
-        main: '#3f51b5',
-      },
-      secondary: {
-        main: '#f50057',
-      },
-      background: {
-        default: '#e9ecec',
-        paper: '#dcd0d0',
-      },
+    type: 'light',
+    primary: {
+      main: '#8247E6',
     },
+    secondary: {
+      main: '#4c94f6',
+    },
+    background: {
+      default: '#fff',
+    },
+  },
   });
 
 const Home = () => {
@@ -35,9 +34,9 @@ const Home = () => {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: "background.paper",
             pt: 8,
             pb: 6,
+            bgcolor: "background.paper"
           }}
         >
           <Container maxWidth="sm">
@@ -71,13 +70,13 @@ const Home = () => {
             <Typography
               variant="h4"
               align="center"
-              color="text.secondary"
+              color="#ff4081"
               paragraph
             >
               Do you know that? 
             </Typography>
               <Button variant="contained">
-        
+
               Nepal's flag is the world’s only non-quadrilateral national flag. Go and search for it under the region 'Asia'.
               </Button>
             </Stack>

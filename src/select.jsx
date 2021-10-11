@@ -8,7 +8,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Container } from "@mui/material";
 import { Stack } from "@mui/material";
-
+import { createTheme } from "@mui/material";
 const currencies = [
   {
     value: "africa",
@@ -56,6 +56,15 @@ export default function Select() {
         });
     }, [currency]);
   
+    const theme = createTheme({
+      palette: {
+          type: 'light',
+        
+          background: {
+            paper: '#e3f2fd'
+          },
+        },
+      });
 
   return (
     <Stack
