@@ -13,6 +13,7 @@ import { Container } from "@mui/material";
 import { Link } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material";
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -27,11 +28,21 @@ function Copyright() {
 }
 
 {
-  /* countryData*/
-}
+  /* countryData*, function  commas as thousands separators, toLocaleString() 
+  "https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript"/
+*/}
 
 const cards = [1, 2, 3, 4, 5, 6];
 
+function numFormatter(num) {
+  if(num > 999 && num < 1000000){
+      return (num/1000).toFixed(1) + ' K'; // convert to K for number from > 1000 < 1 million 
+  }else if(num > 1000000){
+      return (num/1000000).toFixed(1) + ' mil'; // convert to mil for number from > 1 million 
+  }else if(num < 900){
+      return num; // if value < 1000, nothing to do
+  }
+}
 const theme = createTheme();
 
 export default function Album(Props) {
@@ -99,13 +110,13 @@ export default function Album(Props) {
                       Capital : {card?.capital} 
                       </Typography>
                       <Typography >
-                      Area : {card?.area} 
+                      Area : {card?.area.toLocaleString()} km<sup>2</sup>
                       </Typography>
                       <Typography >
                     
                       </Typography>
                       <Typography >
-                      Population : {card?.population} 
+                      Population : {numFormatter(card?.population)} 
                       </Typography>
                     </CardContent>
                     <CardActions>
