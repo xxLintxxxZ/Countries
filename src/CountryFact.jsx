@@ -21,11 +21,11 @@ function Country(props) {
     });
   return (
     <Box >
-      <Card sx={{ maxWidth: 345, border:1, p:2, bgcolor: "lightblue" }} >
+      <Card sx={{ maxWidth: 345, border:1, p:2, bgcolor: "#303F9F", color :"white" }} >
       <CardHeader
-         sx={{ bgcolor: "lightblue"}} 
+         sx={{ bgcolor: "#303F9F"}}
         title= "Flag"
-        subheader="September 14, 2016"
+        subheader="Reserved for text"
       />  
         <CardMedia
           component="img"
@@ -33,10 +33,11 @@ function Country(props) {
           alt="country"
         />
         <CardContent  >
-            Name : {props.name} Capital : {props.capital}
+            Name : {props.name}
         </CardContent>
+        Currency : {props.currency}, Symbol : {props.symbol}
         <CardContent  >
-            Name : {props.name} Capital : {props.capital}
+        
         </CardContent>
       </Card>
   </Box>

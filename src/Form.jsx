@@ -17,7 +17,7 @@ export default function Form(props) {
 
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/name/" + countryTitle)
+    fetch("https://restcountries.com/v2/name/" + countryTitle)
       .then((res) => res.json())
       .then((countryData) => {
         console.log(countryData);
@@ -39,7 +39,6 @@ export default function Form(props) {
   };
 
   
-
   return (
         <Box
           sx={{
@@ -66,7 +65,7 @@ export default function Form(props) {
               <Typography
               variant="h6"
               align="center"
-              color="text.secondary"
+              color="black"
               paragraph
             >
               <Box>
@@ -76,13 +75,15 @@ export default function Form(props) {
                   type="text"
                   value={countryTitle}
                   onChange={handleChange}
+                
                 />
               </Box>
             </Typography>
                 <Country
-                  name={countryData?.[0]?.name.common}
-                  capital={countryData?.[0]?.capital}
+                  name={countryData?.[0]?.name}
                   img={countryData?.[0]?.flags.png}
+                  currency= {countryData?.[0]?.currencies?.[0].code}
+                  symbol= {countryData?.[0]?.currencies?.[0].symbol}
                 />
               </Stack>
               </Box>

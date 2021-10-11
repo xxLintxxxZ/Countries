@@ -12,10 +12,16 @@ export default function TitlebarBelowImageList(Props) {
 
   const theme = createTheme({
     palette: {
-        type: 'light',
-      
-        background: {
-          paper: '#e3f2fd'
+      type: 'light',
+      primary: {
+        main: '#ce93d8',
+      },
+      secondary: {
+        main: 'rgb(220, 0, 78)',
+      },
+      background: {
+        default: '#ff4081',
+        paper: '#f1dbdb',
         },
       },
     });
@@ -54,17 +60,17 @@ export default function TitlebarBelowImageList(Props) {
             <ImageList sx={{ width: 600, height: 450,  pt: 8,
             pb: 6 }}>
             { countryData && countryData.map((item, index) => (
-              <ImageListItem key={index} sx= {{ border :2}}>
+              <ImageListItem key={index} sx= {{ border :2}} >
                 <img
                   src={`${item?.flags.png}?w=248&fit=crop&auto=format`}
                   srcSet={`${item?.flags.png}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.capital}
                   loading="lazy"
                 />
-                <ImageListItemBar
+                <ImageListItemBar sx= {{ border: 2}}
                   title={item?.name.common}
                   subtitle={<span> Capital : {item?.capital } Top-level domain: {item?.tld}</span>}
-                  position="below"
+                  position="below" 
                 />
               </ImageListItem>
             ))}

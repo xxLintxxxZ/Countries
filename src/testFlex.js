@@ -67,12 +67,8 @@ export default function Select() {
       });
 
   return (
-    <Stack
-    sx={{ pt: 4}}
-    direction="row"
-    spacing={2}
-    justifyContent="center"
-  >
+ <>
+ 
             <ImageList sx={{ width: 600, height: 450 }}>
             { countryData && countryData.map((item, index) => (
               <ImageListItem key={index} sx= {{ border :2}}>
@@ -137,6 +133,6 @@ export default function Select() {
       </Box>
 
     </Box>
-    </Stack>
+ </>
   );
 }
