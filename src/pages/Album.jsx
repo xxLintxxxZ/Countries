@@ -87,8 +87,7 @@ export default function Album(Props) {
           }}
         >
           <h2>
-            {" "}
-            There are {countryData.length} countries in {countryTitle}{" "}
+            There are {countryData.length} countries in {countryTitle}
           </h2>
         </Box>
         <Container sx={{ py: 1 }} maxWidth="md">

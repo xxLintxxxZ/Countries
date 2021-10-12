@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import { Box } from "@mui/system";
-import Home from "./Home";
-import Form from "./Form";
+import Home from "./pages/Home";
+import Form from "./pages/Form";
 import { Route, Link as RouterLink } from "react-router-dom";
 import { Switch } from "react-router";
-import TitlebarBelowImageList from "./ImageList";
 import { Link } from "@mui/material";
-import Select from "./select";
-import Album from "./Album";
+import Select from "./pages/select";
+import Album from "./pages/Album";
+
 
 // first part is the nav bar -- in a box - flexbox
 
@@ -47,7 +47,6 @@ function App() {
             Display Countries by Album (testing)
           </Link>
         </Box>
-
       </Box>
     </div>
 
@@ -65,6 +64,7 @@ function App() {
         <Route path="/Album">
           <Album/>
         </Route>
+    
       </Switch>
   </main>
 </div>
