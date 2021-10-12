@@ -8,7 +8,7 @@ import { Switch } from "react-router";
 import { Link } from "@mui/material";
 import Select from "./pages/select";
 import Album from "./pages/Album";
-
+import { Redirect } from "react-router";
 
 // first part is the nav bar -- in a box - flexbox
 
@@ -64,7 +64,7 @@ function App() {
         <Route path="/Album">
           <Album/>
         </Route>
-    
+        <Redirect to="/" />
       </Switch>
   </main>
 </div>
