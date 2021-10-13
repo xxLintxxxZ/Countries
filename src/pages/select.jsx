@@ -9,7 +9,6 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
 import { createTheme } from "@mui/material";
-import { Link} from "react-router-dom";
 
 
    {/* Something wrong with syntax? vercel not loading */}
