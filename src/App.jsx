@@ -2,18 +2,17 @@ import React from "react";
 import "./App.css";
 import { Box } from "@mui/system";
 import Home from "./pages/Home";
-import Form from "./pages/Form";
+import Form from "./pages/form";
 import { Route, Link as RouterLink } from "react-router-dom";
 import { Switch } from "react-router";
 import { Link } from "@mui/material";
-import Select from "./pages/select";
+import Select from "./pages/Select";
 import Album from "./pages/Album";
-import { Redirect } from "react-router";
+import One from "./pages/One";
 
 // first part is the nav bar -- in a box - flexbox
 
 function App() {
-
 
   return (
    
@@ -37,6 +36,7 @@ function App() {
             Search by Country
           </Link>
         </Box>
+
         <Box sx={{ p: 3 }}>
           <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
             Select Countries by Region
@@ -64,11 +64,14 @@ function App() {
         <Route path="/Album">
           <Album/>
         </Route>
-        <Redirect to="/" />
+        <Route path="/:id/:den" children={<One />} />
+   
       </Switch>
   </main>
 </div>
 );
+
+
 }
 
 export default App;

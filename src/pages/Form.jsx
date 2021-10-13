@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Country from "./CountryFact";
-import { Container } from "@mui/material";
 import { Box } from "@mui/system";
-import { Paper } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 

@@ -9,6 +9,9 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
 import { createTheme } from "@mui/material";
+import { Link} from "react-router-dom";
+
+
 const currencies = [
   {
     value: "africa",
@@ -75,7 +78,7 @@ export default function Select() {
   >
             <ImageList sx={{ width: 600, height: 450 }}>
             { countryData && countryData.map((item, index) => (
-              <ImageListItem key={index} sx= {{ border :2}}>
+              <ImageListItem key={index} sx= {{ border :2, p:2}}>
                 <img sx= {{ border :2}}
                   src={`${item?.flags.png}?w=248&fit=crop&auto=format`}
                   srcSet={`${item?.flags.png}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -83,10 +86,11 @@ export default function Select() {
                   loading="lazy"
                 />
                 <ImageListItemBar
-                  title={item?.name.common}
+           
                   subtitle={<span>Top-level domain: {item?.tld}</span>}
                   position="below"
                 />
+                 <Link to = {"/One/" + item?.name.common} sx={{ pt: 3 }} >{item?.name.common}</Link>
               </ImageListItem>
             ))}
           </ImageList>
@@ -132,7 +136,17 @@ export default function Select() {
           color="text.secondary"
           component="p"
         >
+         <br/>
          ~ You can find out from their Top Level Domain ~
+         
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+         Click the names of the country to find more information
         </Typography>
       </Box>
 
