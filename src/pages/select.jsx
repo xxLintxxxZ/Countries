@@ -11,7 +11,7 @@ import { Stack } from "@mui/material";
 import { createTheme } from "@mui/material";
 import { Link} from "react-router-dom";
 
-
+   {/* Something wrong with syntax? vercel not loading */}
 const currencies = [
   {
     value: "africa",

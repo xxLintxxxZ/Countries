@@ -5,8 +5,7 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 
 
-
-export default function Form(props) {
+function Form(props) {
 
   const [countryData, setcountryData] = useState([]);
   const [countryTitle, setcountryTitle] = useState("australia");
@@ -87,3 +86,5 @@ export default function Form(props) {
   
   );
 }
+
+export default Form

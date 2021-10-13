@@ -21,7 +21,7 @@ export default function One(props) {
         console.log(countryData);
         setcountryData(countryData);
       });
-  }, [countryTitle]);
+  }, []);
 
   return (
     <>
