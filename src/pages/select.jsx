@@ -12,6 +12,9 @@ import { createTheme } from "@mui/material";
 import { Link} from "react-router-dom";
 
    {/* Something wrong with syntax? vercel not loading */}
+
+   {/* Select page not loading why */}
+   
 const currencies = [
   {
     value: "africa",

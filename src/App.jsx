@@ -6,7 +6,7 @@ import Form from "./pages/Form"
 import { Route, Link as RouterLink } from "react-router-dom";
 import { Switch } from "react-router";
 import { Link } from "@mui/material";
-import Select from "./pages/Select";
+import Select from "./pages/Select"
 import Album from "./pages/Album";
 import One from "./pages/One";
 
