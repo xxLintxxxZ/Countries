@@ -36,7 +36,7 @@ const currencies = [
 ];
 
 
-export default function Select2() {
+export default function Select() {
   const [currency, setCurrency] = useState("europe");
   const [countryData, setcountryData] = useState([]);
   const [countryTitle, setcountryTitle] = useState(currency);

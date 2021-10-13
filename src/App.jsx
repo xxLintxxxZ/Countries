@@ -6,10 +6,11 @@ import Form from "./pages/Form"
 import { Route, Link as RouterLink } from "react-router-dom";
 import { Switch } from "react-router";
 import { Link } from "@mui/material";
-import Select2 from "./pages/Select2";
+import Select from "./pages/Select";
 import Album from "./pages/Album";
 import One from "./pages/One";
-
+import { Button } from "@mui/material";
+import { Typography } from "@mui/material";
 // first part is the nav bar -- in a box - flexbox
    {/* Something wrong with syntax? vercel not loading */}
 
@@ -28,25 +29,33 @@ function App() {
       >
         <Box sx={{ p: 3}}>
           <Link component={RouterLink} to="/" sx={{ color: "white" }}>
-            {" "}
-            Home{" "}
+            Home
           </Link>
         </Box>
-        <Box sx={{ p: 3}}>
-          <Link component={RouterLink} to="/Form" sx={{ color: "white" }}>
-            Search by Country
-          </Link>
+        <Box sx={{ p: 2}}>
+          <Button
+              variant="contained"
+              color="primary"
+              component={RouterLink}
+              to="/Form"
+            >
+              <Typography variant="button">Search by Country</Typography>
+            </Button>
         </Box>
-
-        <Box sx={{ p: 3 }}>
-          <Link component={RouterLink} to="/Select2" sx={{ color: "white" }}>
+        <Box sx={{ py: 3, alignItems: "center" }}>
+          <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
             Select Countries by Region
           </Link>
         </Box>
-        <Box sx={{ p: 3 }}>
-          <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
-            Display Countries by Album (testing)
-          </Link>
+        <Box sx={{ p: 2}}>
+        <Button
+              variant="contained"
+              color="primary"
+              component={RouterLink}
+              to="/Album"
+            >
+              <Typography variant="button">Display Countries by Album</Typography>
+            </Button>
         </Box>
       </Box>
     </div>
@@ -59,8 +68,8 @@ function App() {
         <Route path="/Form">
           <Form />
         </Route>
-        <Route path ="/Select2">
-          <Select2 />
+        <Route path ="/Select">
+          <Select />
         </Route>
         <Route path="/Album">
           <Album/>
