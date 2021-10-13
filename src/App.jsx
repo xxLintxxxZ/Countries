@@ -60,7 +60,7 @@ function App() {
           <Form />
         </Route>
         <Route path ="/Select2">
-          <Select />
+          <Select2 />
         </Route>
         <Route path="/Album">
           <Album/>
