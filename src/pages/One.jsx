@@ -2,15 +2,10 @@ import React, { useState, useEffect } from "react";
 import Country from "./CountryFact";
 import { Box } from "@mui/system";
 import { Stack } from "@mui/material";
-import { Typography } from "@mui/material";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 export default function One(props) {
   const [countryData, setcountryData] = useState([]);
-  const [countryTitle, setcountryTitle] = useState("australia");
-
-  const [currency, setCurrency] = useState(null);
-  const coindeskURL = "https://restcountries.com/v2/name/";
 
   // We can use the `useParams` hook here to access
   // the dynamic pieces of the URL.

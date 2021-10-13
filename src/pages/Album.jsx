@@ -35,7 +35,6 @@ function Copyright() {
 const cards = [1, 2, 3, 4, 5, 6];
 
 
-
 function commarize() {
   // Alter numbers larger than 1k
   if (this >= 1e3) {

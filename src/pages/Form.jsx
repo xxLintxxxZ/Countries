@@ -6,12 +6,10 @@ import { Typography } from "@mui/material";
 
 
 
-
 export default function Form(props) {
 
   const [countryData, setcountryData] = useState([]);
   const [countryTitle, setcountryTitle] = useState("australia");
-
 
 
   useEffect(() => {
