@@ -6,7 +6,7 @@ import Form from "./pages/Form"
 import { Route, Link as RouterLink } from "react-router-dom";
 import { Switch } from "react-router";
 import { Link } from "@mui/material";
-import Select from "./pages/Select"
+import Select2 from "./pages/Select2";
 import Album from "./pages/Album";
 import One from "./pages/One";
 
@@ -39,7 +39,7 @@ function App() {
         </Box>
 
         <Box sx={{ p: 3 }}>
-          <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
+          <Link component={RouterLink} to="/Select2" sx={{ color: "white" }}>
             Select Countries by Region
           </Link>
         </Box>
@@ -59,7 +59,7 @@ function App() {
         <Route path="/Form">
           <Form />
         </Route>
-        <Route path="/Select">
+        <Route path ="/Select2">
           <Select />
         </Route>
         <Route path="/Album">
