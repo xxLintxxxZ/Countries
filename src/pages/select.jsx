@@ -10,6 +10,7 @@ import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
 import { createTheme } from "@mui/material";
 import { Link} from "react-router-dom";
+import One from "./pages/One";
 
    {/* Something wrong with syntax? vercel not loading */}
 
@@ -89,11 +90,11 @@ export default function Select() {
                   loading="lazy"
                 />
                 <ImageListItemBar
-           
+                  subtitle={<span> Name: {item?.name.common}</span>}
                   subtitle={<span>Top-level domain: {item?.tld}</span>}
                   position="below"
                 />
-                 <Link to = {"/One/" + item?.name.common} sx={{ pt: 3 }} >{item?.name.common}</Link>
+                
               </ImageListItem>
             ))}
           </ImageList>
