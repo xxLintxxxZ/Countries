@@ -5,36 +5,36 @@ import { Stack } from "@mui/material";
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
+import Quote from "./Quote";
 import { createTheme, ThemeProvider } from "@mui/material";
-
 
 const theme = createTheme({
   palette: {
-    type: 'light',
+    type: "light",
     primary: {
-      main: '#8247E6',
+      main: "#8247E6",
     },
     secondary: {
-      main: '#4c94f6',
+      main: "#4c94f6",
     },
     background: {
-      default: '#fff',
+      default: "#fff",
     },
   },
-  });
+});
 
 const Home = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-     
+
       <main>
         {/* Hero unit */}
         <Box
           sx={{
             pt: 8,
             pb: 6,
-            bgcolor: "background.paper"
+            bgcolor: "background.paper",
           }}
         >
           <Container maxWidth="sm">
@@ -53,30 +53,34 @@ const Home = () => {
               color="text.secondary"
               paragraph
             >
-              Random country's flags and their capital. don&apos;t simply skip over it
-              entirely.
+              Random country's flags and their capital. don&apos;t simply skip
+              over it entirely.
             </Typography>
-           
-            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Coat_of_arms_of_Saint_Pierre_and_Miquelon.svg/400px-Coat_of_arms_of_Saint_Pierre_and_Miquelon.svg.png" width = "200" height = "247"/>
-           
+
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Coat_of_arms_of_Saint_Pierre_and_Miquelon.svg/400px-Coat_of_arms_of_Saint_Pierre_and_Miquelon.svg.png"
+              width="200"
+              height="247"
+            />
+
             <Stack
               sx={{ pt: 4 }}
               direction="column"
               spacing={2}
               justifyContent="center"
             >
-            <Typography
-              variant="h4"
-              align="center"
-              color="#ff4081"
-              paragraph
-            >
-              Do you know that? 
-            </Typography>
+              <Typography variant="h4" align="center" color="#ff4081" paragraph>
+                Do you know that?
+              </Typography>
               <Button variant="contained">
-
-              Nepal's flag is the world’s only non-quadrilateral national flag. Go and search for it under the region 'Asia'.
+                Nepal's flag is the world’s only non-quadrilateral national
+                flag. Go and search for it under the region 'Asia'.
               </Button>
+              <br/>
+              <Typography variant="h5" align="center" gutterBottom>
+                Quote of the Day
+              </Typography>
+              <Quote />
             </Stack>
           </Container>
         </Box>
