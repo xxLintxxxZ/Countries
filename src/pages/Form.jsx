@@ -11,6 +11,7 @@ export default function Form(props) {
   const [countryData, setcountryData] = useState([]);
   const [countryTitle, setcountryTitle] = useState("australia");
 
+        {/* Something wrong with syntax */}
 
   useEffect(() => {
     fetch("https://restcountries.com/v2/name/" + countryTitle)

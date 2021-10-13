@@ -11,6 +11,7 @@ import Album from "./pages/Album";
 import One from "./pages/One";
 
 // first part is the nav bar -- in a box - flexbox
+   {/* Something wrong with syntax? vercel not loading */}
 
 function App() {
 
