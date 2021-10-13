@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Box } from "@mui/system";
 import Home from "./pages/Home";
-import Form from "./pages/form";
+import Form from "./pages/Form"
 import { Route, Link as RouterLink } from "react-router-dom";
 import { Switch } from "react-router";
 import { Link } from "@mui/material";

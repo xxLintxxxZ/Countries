@@ -34,7 +34,7 @@ export default function Form(props) {
     setcountryTitle(title);
   };
 
-  
+
   return (
         <Box
           sx={{
@@ -71,7 +71,6 @@ export default function Form(props) {
                   type="text"
                   value={countryTitle}
                   onChange={handleChange}
-                
                 />
               </Box>
             </Typography>
@@ -81,6 +80,7 @@ export default function Form(props) {
                   currency= {countryData?.[0]?.currencies?.[0].code}
                   symbol= {countryData?.[0]?.currencies?.[0].symbol}
                 />
+
               </Stack>
               </Box>
   
