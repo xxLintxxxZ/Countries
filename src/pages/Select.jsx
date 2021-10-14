@@ -12,7 +12,7 @@ import { createTheme } from "@mui/material";
 import { Link} from "react-router-dom";
 
 
-const currencies = [
+const info = [
   {
     value: "africa",
     label: "africa",
@@ -39,7 +39,7 @@ const currencies = [
 export default function Select() {
   const [currency, setCurrency] = useState("europe");
   const [countryData, setcountryData] = useState([]);
-  const [countryTitle, setcountryTitle] = useState(currency);
+  const [countryTitle, setcountryTitle] = useState("europe");
 
   const handleChange = (event) => {
     setCurrency(event.target.value);
@@ -51,7 +51,7 @@ export default function Select() {
  console.log(countryTitle)
   
     useEffect(() => {
-      fetch("https://restcountries.com/v3.1/region/" + currency)
+      fetch("https://restcountries.com/v3.1/region/" + countryTitle)
         .then((res) => res.json())
         .then((countryData) => {
           console.log(countryData);
@@ -106,12 +106,12 @@ export default function Select() {
           id="standard-select-currency"
           select
           label="Select"
-          value={currency}
+          value={countryTitle}
           onChange={handleChange}
           helperText="Please select the region"
           variant="standard"
         >
-          {currencies.map((option) => (
+          {info.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>

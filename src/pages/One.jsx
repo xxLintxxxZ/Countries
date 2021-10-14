@@ -70,8 +70,6 @@ export default function One(props) {
             currency={countryData?.[0]?.currencies?.[0].code}
             symbol={countryData?.[0]?.currencies?.[0].symbol}
             capital = {countryData?.[0]?.capital}
-            currency={countryData?.[0]?.currencies?.[0].code}
-            symbol={countryData?.[0]?.currencies?.[0].symbol}
             area={countryData?.[0]?.area.toLocaleString()}
             population={countryData?.[0]?.population.commarize()}
           />

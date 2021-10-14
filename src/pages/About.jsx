@@ -3,8 +3,10 @@ import { styled } from "@mui/material/styles";
 import MuiGrid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import Quote from "./Quote";
-import { Container } from "@mui/material";
+import { Container, ListItem } from "@mui/material";
 import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import List from "@mui/material/List";
 
 const Grid = styled(MuiGrid)(({ theme }) => ({
   width: "100%",
@@ -14,27 +16,50 @@ const Grid = styled(MuiGrid)(({ theme }) => ({
   },
 }));
 
-export default function VerticalDividerText() {
+export default function About() {
   const header = (
-    <div>
-      <h2>{`Thanks for popping by `}</h2>
-    </div>
-  );
+    <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: { xs: "center", md: "flex-start" },
+      m: 5,
+      minWidth: { md: 350 },
+     color: "#303F9F"
+    }}
+  ><Typography variant="h4">Thanks for popping by </Typography>
+  </Box>);
   const content = (
-    <div>
-      <h3>{`What is this app about`}</h3>
-      {
-        <span>
-          <li> Look at flags</li>
-          <li>
-            {" "}
-            Identifying their Capital, yes sometimes we mistake city as capital
-          </li>
-          <li> Check out their Maps</li>
-          <li> Currency</li>
-        </span>
-      }
-    </div>
+  
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: { xs: "center", md: "flex-start" },
+          m: 5,
+          minWidth: { md: 350 },
+        }}
+      >
+        <Typography variant="h6">{`What is this app about? Looking @ different countries' :`}</Typography>
+        {
+          <span>
+            <Box sx={{ pl:2 }}>
+              <List>
+                <ListItem>- Flags</ListItem>
+                <ListItem>
+                  - Identifying their Capital, yes sometimes we mistake their
+                  city as their capital
+                </ListItem>
+                <ListItem>
+                  - Check out their Maps, sorry Asia countries only
+                </ListItem>
+              </List>
+              <ListItem>{">"} and ... Currency</ListItem>
+            </Box>
+          </span>
+        }
+      </Box>
+  
   );
   return (
     <Grid container>
@@ -43,13 +68,23 @@ export default function VerticalDividerText() {
         {content}
       </Grid>
       <Divider orientation="vertical" flexItem></Divider>
-      <Grid item xs sx={{ py: 5 }}>
-      <Container maxWidth="sm">
-              <Typography variant="h5" align="center" >
-                Quote of the Day
-              </Typography>
-              <Quote />
-          </Container>
+      <Grid item xs sx={{ py: 8}}>
+        <Container maxWidth="sm">
+          <Typography variant="h5" align="center">
+            Quote of the Day
+          </Typography>
+          <Box
+            sx={{
+              m: 3,
+              p: 1,
+              border: 3,
+              borderColor: "#EC407A",
+              borderRadius: 5,
+            }}
+          >
+            <Quote />
+          </Box>
+        </Container>
       </Grid>
     </Grid>
   );

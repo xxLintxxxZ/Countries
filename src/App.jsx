@@ -10,8 +10,9 @@ import Select from "./pages/Select";
 import Album from "./pages/Album";
 import One from "./pages/One";
 import { Button } from "@mui/material";
-import About from "./pages/About";
+import About from "./pages/About"
 import { Typography } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 
 // first part is the nav bar -- in a box - flexbox
 
@@ -20,14 +21,8 @@ function App() {
   return (
    
     <div className="App">
-    <div style={{ width: "100%" }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          bgcolor: '#4c94f6',
-        }}
-      >
+    <AppBar sx= {{bgcolor: '#4c94f6'}}>
+        <Toolbar>
         <Box sx={{ p: 2}}>
           <Link component={RouterLink} to="/" sx={{ color: "white" }}>
             Home
@@ -38,18 +33,17 @@ function App() {
           Search by Country
           </Link>
         </Box>
-        <Box sx={{ py: 2, alignItems: "center" }}>
+        <Box sx={{ py: 2}}>
           <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
             Select Countries by Region
           </Link>
         </Box>
         <Box sx={{ p: 2}}>
-
         <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
-            Select Countries by Album
+          Asia Countries Only
           </Link>
         </Box>
-        <Box sx={{ p: 1, flexGrow :1 }}>
+        <Box sx={{ p: 1, position: "absolute", right: "6%"}}>
           <Button
               variant="contained"
               color="primary"
@@ -59,10 +53,12 @@ function App() {
               <Typography variant="button">About</Typography>
             </Button>
         </Box>
-      </Box>
-    </div>
+        </Toolbar>
+    </AppBar>
+      
 
     <main >
+    <Toolbar/>
       <Switch>
         <Route exact path="/">
           <Home />

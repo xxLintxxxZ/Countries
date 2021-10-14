@@ -5,8 +5,8 @@ import { Stack } from "@mui/material";
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
-import Quote from "./Quote";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -72,10 +72,12 @@ const Home = () => {
               <Typography variant="h4" align="center" color="#ff4081" paragraph>
                 Do you know that?
               </Typography>
-              <Button variant="contained">
+           
+            <Box sx = {{bgcolor : '#8545F9', color : "white" }}>
                 Nepal's flag is the world’s only non-quadrilateral national
                 flag. Go and search for it under the region 'Asia'.
-              </Button>
+              </Box>
+              
               <br/>
             </Stack>
           </Container>
@@ -83,9 +85,6 @@ const Home = () => {
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Quote of the day
-        </Typography>
         <Typography
           variant="subtitle1"
           align="center"

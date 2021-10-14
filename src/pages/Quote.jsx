@@ -10,8 +10,7 @@ export default function Quote() {
         const data  = await response.json();
         setData(data);
       } catch (error) {
-        // If the API request failed, log the error to console and update state
-        console.error(error);
+        // and update state
         setData ("This page has failed");
       }
     }
