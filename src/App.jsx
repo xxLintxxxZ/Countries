@@ -10,9 +10,10 @@ import Select from "./pages/Select";
 import Album from "./pages/Album";
 import One from "./pages/One";
 import { Button } from "@mui/material";
+import About from "./pages/About";
 import { Typography } from "@mui/material";
+
 // first part is the nav bar -- in a box - flexbox
-   {/* Something wrong with syntax? vercel not loading */}
 
 function App() {
 
@@ -27,34 +28,35 @@ function App() {
           bgcolor: '#4c94f6',
         }}
       >
-        <Box sx={{ p: 3}}>
+        <Box sx={{ p: 2}}>
           <Link component={RouterLink} to="/" sx={{ color: "white" }}>
             Home
           </Link>
         </Box>
         <Box sx={{ p: 2}}>
-          <Button
-              variant="contained"
-              color="primary"
-              component={RouterLink}
-              to="/Form"
-            >
-              <Typography variant="button">Search by Country</Typography>
-            </Button>
+        <Link component={RouterLink} to="/Form" sx={{ color: "white" }}>
+          Search by Country
+          </Link>
         </Box>
-        <Box sx={{ py: 3, alignItems: "center" }}>
+        <Box sx={{ py: 2, alignItems: "center" }}>
           <Link component={RouterLink} to="/Select" sx={{ color: "white" }}>
             Select Countries by Region
           </Link>
         </Box>
         <Box sx={{ p: 2}}>
-        <Button
+
+        <Link component={RouterLink} to="/Album" sx={{ color: "white" }}>
+            Select Countries by Album
+          </Link>
+        </Box>
+        <Box sx={{ p: 1 }}>
+          <Button
               variant="contained"
               color="primary"
               component={RouterLink}
-              to="/Album"
+              to="/About"
             >
-              <Typography variant="button">Display Countries by Album</Typography>
+              <Typography variant="button">About</Typography>
             </Button>
         </Box>
       </Box>
@@ -75,7 +77,9 @@ function App() {
           <Album/>
         </Route>
         <Route path="/:id/:den" children={<One />} />
-   
+        <Route path="/About">
+          <About/>
+        </Route>
       </Switch>
   </main>
 </div>

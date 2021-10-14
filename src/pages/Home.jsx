@@ -77,10 +77,6 @@ const Home = () => {
                 flag. Go and search for it under the region 'Asia'.
               </Button>
               <br/>
-              <Typography variant="h5" align="center" gutterBottom>
-                Quote of the Day
-              </Typography>
-              <Quote />
             </Stack>
           </Container>
         </Box>
