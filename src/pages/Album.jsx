@@ -58,7 +58,16 @@ function commarize() {
 Number.prototype.commarize = commarize
 String.prototype.commarize = commarize
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#9A6DEA"
+    },
+    secondary: {
+      main: '#11cb5f',
+    },
+  },
+});
 
 export default function Album(Props) {
   const [countryData, setcountryData] = useState([]);
@@ -104,7 +113,8 @@ export default function Album(Props) {
                       height: "100%",
                       display: "flex",
                       flexDirection: "column",
-                      bgcolor: "#9CD6E2",
+                      bgcolor: "#B2EBF2",
+                      alignItems : "center"
                     }}
                   >
                     <CardMedia
@@ -134,11 +144,7 @@ export default function Album(Props) {
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Typography sx={{ color: "navy", fontSize: 20, fontWeight : "medium", px: 8}}>
-                      <Link href = {card?.maps.googleMaps} >
-                        Map
-                      </Link>
-                      </Typography>
+                    <Button  color = "primary" variant = "contained" href = {card?.maps.googleMaps} size="medium">Map</Button>
                     </CardActions>
                   </Card>
                 </Grid>
