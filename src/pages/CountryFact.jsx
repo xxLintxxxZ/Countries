@@ -5,8 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardHeader } from "@mui/material";
 import { createTheme } from "@mui/material";
 import { Box } from "@mui/system";
-import { Typography
- } from "@mui/material";
+import { Typography} from "@mui/material";
 function Country(props) {
   console.log("Props ", props);
 
