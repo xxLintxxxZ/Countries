@@ -49,7 +49,7 @@ function App() {
             Select Countries by Album
           </Link>
         </Box>
-        <Box sx={{ p: 1 }}>
+        <Box sx={{ p: 1, flexGrow :1 }}>
           <Button
               variant="contained"
               color="primary"
