@@ -29,6 +29,7 @@ What technologies you used that helped you build this project.
 
 ![Image of sketch]
 (https://git.generalassemb.ly/linxxnint/2nd_Project/blob/master/images/wireframe.jpg)
+(https://git.generalassemb.ly/linxxnint/2nd_Project/blob/master/images/wireframe.jpg?raw=true)
 
 ### User Stories
 
