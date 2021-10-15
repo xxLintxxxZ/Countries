@@ -1,4 +1,4 @@
-﻿
+
 # My 2nd_Project - Countries
 
 Fun with flags.
@@ -27,9 +27,7 @@ What technologies you used that helped you build this project.
 ### Wireframes
 
 
-![Image of sketch]
-(https://git.generalassemb.ly/linxxnint/2nd_Project/blob/master/images/wireframe.jpg)
-(https://git.generalassemb.ly/linxxnint/2nd_Project/blob/master/images/wireframe.jpg?raw=true)
+https://drive.google.com/file/d/1xUF6_QGdtUP5kevNqCMEYuZoqHHZJqvH/view?usp=sharing
 
 ### User Stories
 
