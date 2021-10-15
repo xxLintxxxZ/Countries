@@ -1,4 +1,4 @@
-
+﻿
 # My 2nd_Project - Countries
 
 Fun with flags.
@@ -17,7 +17,6 @@ User can search for flags of countries, as well as see the following:
 What technologies you used that helped you build this project. 
 
 ```
-Example:
 
 - React
 - JavaScript's fetch API
@@ -29,7 +28,7 @@ Example:
 
 
 ![Image of sketch]
-(https://git.generalassemb.ly/linxxnint/2nd_Project/tree/master/wireframe.jpg)
+(https://git.generalassemb.ly/linxxnint/2nd_Project/blob/master/images/wireframe.jpg)
 
 ### User Stories
 
@@ -61,10 +60,6 @@ List unsolved problems which would be fixed in future iterations.
 - https://restcountries.com
 - https://api.quotable.io/random
 
-
----
-
-## Acknowledgments
 
 
 ---
