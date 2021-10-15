@@ -14,7 +14,7 @@ User can search for flags of countries, as well as see the following:
 - Currency
 
 ### Technical Used
-What technologies you used that helped you build this project. 
+
 
 ```
 
@@ -51,7 +51,7 @@ Course materials, research online, google, stack overflow
 
 ### Unsolved problems
 
-List unsolved problems which would be fixed in future iterations.
+If user clicks the map, it opens to a window and unable to return to the main page.
 
 
 ## APIs Used
